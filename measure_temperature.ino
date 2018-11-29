@@ -58,7 +58,7 @@ void loop()
   {
     case BUTTON_UP:
     lcd.clear();
-    text = "C or F? Press Left or Right";
+    text = "C or K? Press Left or Right";
     isUpClick = true;
     break;
     case BUTTON_LEFT:
@@ -69,6 +69,7 @@ void loop()
       lcd.clear();
       lcd.print(t + " C");
       delay(5000);
+      lcd.clear();
       text = "If you wanna measure the temperature - press UP";
       isUpClick=false;
     }
@@ -79,8 +80,9 @@ void loop()
       buzzer();
       t = (String)temperatureF();
       lcd.clear();
-      lcd.print(t + " F");
+      lcd.print(t + " K");
       delay(5000);
+      lcd.clear();
       text = "If you wanna measure the temperature - press UP";
       isUpClick=false;
     }
